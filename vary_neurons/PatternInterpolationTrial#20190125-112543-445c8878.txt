@@ -1,0 +1,13 @@
+seed = 3
+n_neurons = 200
+n_train_pattern = 3
+
+mean_goal = 0.21891618704111154
+std_goal = 0.4723107876694281
+median_goal = 0.13267451952808412
+mean_aimless = 0.2719424159909757
+std_aimless = 0.7870374020462888
+median_aimless = 0.3262517699606674
+mean_noplay = 0.19152895317571417
+std_noplay = 0.3530574454422461
+median_noplay = 0.08654145732610108
