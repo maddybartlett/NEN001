@@ -6,7 +6,7 @@ import pickle
 #data_dir + str(seed) + '_' + classes[0] + '_train_time.npy'
 def prepare_input_data(seed, data_dir):
 
-    classes = ['goal', 'noplay', 'aimless']
+    classes = ['noplay', 'aimless', 'goal']
 #for j in range(n_experiments):
     #seed=j
     goal_train_pca=np.load('%s/%s_goal_train_pca.npy' % (data_dir, seed), allow_pickle=True)
@@ -47,12 +47,12 @@ def prepare_input_data(seed, data_dir):
     aim_test=np.load('%s/%s_aim_test_pca2.npy' % (data_dir, seed), allow_pickle=True)
     aim_test_time=np.load('%s/%s_aim_time.npy' % (data_dir, seed), allow_pickle=True)
 
-    aim_test_label = np.full(aim_test.shape, classes.index('aimless'))
-    goal_test_label = np.full(goal_test.shape, classes.index('goal'))
-    noplay_test_label = np.full(noplay_test.shape, classes.index('noplay'))
+    aim_test_label = np.full(aim_test.shape, (classes.index('aimless')))
+    goal_test_label = np.full(goal_test.shape, (classes.index('goal')))
+    noplay_test_label = np.full(noplay_test.shape, (classes.index('noplay')))
 
-    noplay_train_label = np.full(np.asarray(noplay_train).shape, classes.index('noplay'))
-    goal_train_label = np.full(np.asarray(goal_train).shape, classes.index('goal'))
+    noplay_train_label = np.full(np.asarray(noplay_train).shape, (classes.index('noplay')))
+    goal_train_label = np.full(np.asarray(goal_train).shape, (classes.index('goal')))
     #np.concatenate
     #np.full(noplay_train.shape, classes.index('noplay'))
 
